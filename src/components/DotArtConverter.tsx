@@ -82,8 +82,16 @@ const DotArtConverter: React.FC = () => {
     const dataURL = dotCanvasRef.current.toDataURL('image/png')
     const link = document.createElement('a')
     link.href = dataURL
+    link.download = 'dot ventolin buy nz dot art converterlink.href = dataURL
     link.download = 'dot-art.png'
     link.click()
+  }
+
+  const handleDotSizeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseInt(e.target.value)
+    if (value >= 1 && value <= 20) {
+      setDotSize(value)
+    }
   }
 
   useEffect(() => {
@@ -96,11 +104,11 @@ const DotArtConverter: React.FC = () => {
         <input type="file" accept="image/*" onChange={handleImageUpload} />
         <label>Dot Size:</label>
         <input
-          type="range"
-          min="2"
+          type="number"
+          min="1"
           max="20"
           value={dotSize}
-          onChange={(e) => setDotSize(parseInt(e.target.value))}
+          onChange={handleDotSizeChange}
         />
         <label>Color Mode:</label>
         <select
