@@ -21,7 +21,7 @@ canvas {
 }
 
 input[type="file"],
-input[type="range"],
+input[type="number"],
 button,
 select {
   background-color: #007bff;
@@ -31,6 +31,17 @@ select {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+input[type="number"] {
+  width: 80px;
+  -moz-appearance: textfield; /* Firefox */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* Chrome, Safari, Edge */
+  margin: 0;
 }
 
 input[type="file"] {
@@ -52,6 +63,7 @@ input[type="file"]::before {
 }
 
 input[type="file"]:hover,
+input[type="number"]:hover,
 button:hover,
 select:hover {
   background-color: #0069d9;
