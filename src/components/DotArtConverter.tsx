@@ -82,7 +82,7 @@ const DotArtConverter: React.FC = () => {
     const dataURL = dotCanvasRef.current.toDataURL('image/png')
     const link = document.createElement('a')
     link.href = dataURL
-    link.download = 'dot-art.png' // แก้ไขให้เป็น string ที่สมบูรณ์
+    link.download = 'dot-art.png'
     link.click()
   }
 
@@ -108,6 +108,7 @@ const DotArtConverter: React.FC = () => {
           max="20"
           value={dotSize}
           onChange={handleDotSizeChange}
+          className="dot-size-input"
         />
         <label>Color Mode:</label>
         <select
