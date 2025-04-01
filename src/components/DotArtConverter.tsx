@@ -4,7 +4,7 @@ import './DotArtConverter.css'
 type ColorMode = 'color' | 'grayscale' | 'sepia' | 'inverted' | 'blackwhite'
 
 const DotArtConverter: React.FC = () => {
-  const [dotSize, setDotSize] = useState<number>(4)
+  const [dotSize, setDotSize] = useState<number>()
   const [colorMode, setColorMode] = useState<ColorMode>('color')
   const [image, setImage] = useState<HTMLImageElement | null>(null)
   
