@@ -82,8 +82,7 @@ const DotArtConverter: React.FC = () => {
     const dataURL = dotCanvasRef.current.toDataURL('image/png')
     const link = document.createElement('a')
     link.href = dataURL
-    link.download = 'dot ventolin buy nz dot art converterlink.href = dataURL
-    link.download = 'dot-art.png'
+    link.download = 'dot-art.png' // แก้ไขให้เป็น string ที่สมบูรณ์
     link.click()
   }
 
